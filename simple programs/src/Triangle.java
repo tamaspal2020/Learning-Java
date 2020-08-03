@@ -16,7 +16,6 @@ public class Triangle {
     public static void main(String args[]){
 	int rows, i, j;
 
-	//getting number of rows from user
 	System.out.println("number of rows");
 	Scanner scanner = new Scanner(System.in);
 	rows = scanner.nextInt();
