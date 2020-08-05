@@ -28,7 +28,6 @@ public Tablet(int resx, int resy,  double android, int ar) {
 }
 public Tablet(int ar) {
 	this.ar=ar;
-	
 }
 public int getresX() {
 	return this.resX;
