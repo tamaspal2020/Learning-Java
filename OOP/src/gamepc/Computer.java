@@ -12,10 +12,11 @@ public class Computer {
 		int berleshossza=0;
 		return berleshossza;
 	}
-	public Computer(int m, int mag, int dij) {
+	public Computer(int m, int mag, int dij, String proc) {
 		this.memory=m;
 		this.magszam=mag;
 		this.oradij=dij;
+		this.proc=proc;
 	}
 	/*
 	konstruktor a processzor és bérleti díj paraméterrel, memória 8 Gb, magok száma 2
