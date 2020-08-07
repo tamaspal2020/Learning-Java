@@ -1,5 +1,5 @@
 package gamepc;
-
+import gamepc.CentralControl;
 public class Computer {
 	public int memory;
 	public String proc;
@@ -12,11 +12,11 @@ public class Computer {
 		int berleshossza=0;
 		return berleshossza;
 	}
-	public Computer(int m, int mag, int dij, String proc) {
+	public Computer(int m, int mag, int dij, CentralControl.proce p) {
 		this.memory=m;
 		this.magszam=mag;
 		this.oradij=dij;
-		this.proc=proc;
+		this.proc=p.toString();
 	}
 	/*
 	konstruktor a processzor és bérleti díj paraméterrel, memória 8 Gb, magok száma 2
