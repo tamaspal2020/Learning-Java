@@ -22,7 +22,7 @@ public NorthPanel() {
 	this.setLayout(new FlowLayout(FlowLayout.LEFT));
 	this.setBackground(new Color(128,128,128));
 	label=new JLabel();
-	label.setIcon(new ImageIcon("images/rlt.png"));
+	label.setIcon(new ImageIcon("images/wr.png"));
 	this.add(label);
 	JLabel label1=new JLabel();
 	label1.setIcon(new ImageIcon("images/rdt60.png"));
