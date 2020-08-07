@@ -8,6 +8,7 @@ public class Computer {
 	public int jatszottorak;
 	public int keresettpenz;
 	public int berleskezdete;
+	public int berlesvege;
 	public int berlesvolt() {
 		int berleshossza=0;
 		return berleshossza;
