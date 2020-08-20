@@ -1,5 +1,6 @@
+package codeforce;
 import java.util.Scanner;
-public class Main
+public class insomnia
 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
@@ -9,7 +10,7 @@ public class Main
 		    int n=sc.nextInt();
 		    int d=sc.nextInt();
 		int sum=0;
-		if(k<d || l<d || m<d || n<d || (k=l && l==m && m==n)) {
+		if(k<d || l<d || m<d || n<d || (k==l && l==m && m==n)) {
 		for (int j=1;j<=d;j++){
 		    if (j%k==0) {
 		        sum++;
