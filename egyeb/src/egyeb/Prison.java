@@ -18,7 +18,7 @@ public static Random rand=new Random();
 		for (int i=0; i<numberofcells; i++) {
 			int thickness=rand.nextInt(15)+5;
 			int storage=rand.nextInt(thickness)+1;
-			int battery=rand.nextInt(storage)/2;
+			int battery=rand.nextInt(storage)/2; /*twrtwertwert*/
 			lista.add(battery); 
 			lista.add(storage);
 			lista.add(thickness);
