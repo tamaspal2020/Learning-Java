@@ -17,7 +17,7 @@ public class ListDemo {
 		
 		
 		List<Integer> szamok=new ArrayList<>();
-		szamok.add(32);
+		szamok.add(32);  //sfdgsfd
 		szamok.add(3);
 		szamok.add(345345);
 		szamok.add(-3);
