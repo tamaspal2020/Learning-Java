@@ -12,7 +12,7 @@ public void setegyseg(int i){
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Phone p=new Phone();
+		Phone p=new Phone(); ///xvy
 		p.setegyseg(10);
 		System.out.println(p.getegyseg());
 	}
