@@ -48,12 +48,10 @@ public class Pract {
 		List<Vehicle> vehicles = new ArrayList<Vehicle>();
 		vehicles.add(new Car());
 		vehicles.add(new Boat());
-
-		List<? extends Vehicle> sameVehicles = vehicles; 
-		
 		List<? extends Vehicle> v=new ArrayList<Car>();
 		v=vehicles;
 		//v.add(new Car());
+
 		//v.add(new Boat());
 		System.out.println(v.get(0).getClass()+"sgdf");
 		Car ca=(Car)v.get(0);
@@ -62,7 +60,7 @@ public class Pract {
 		//sameVehicles.add(new Car());   // compile error!   ///you will lose the ability to add anything to the list through the new reference:
 		//sameVehicles.add(new Boat()); ///compile error!   you will lose the ability to add anything to the list through the new reference:
 		//sameVehicles.add(new Vehicle()); ///compile error!   you will lose the ability to add anything to the list through the new reference:
-		System.out.println(sameVehicles.get(0).getClass()); 
+		///System.out.println(sameVehicles.get(0).getClass()); 
 		/*
 		 * Types describe properties of instances passed around in our program, and the type system must always be able to guarantee 
 		 * the integrity of what an instance was originally created as. When an instance is passed as a compatible less specific type than what it was originally declared, 
