@@ -55,3 +55,13 @@ class SoundType<T>{
 		this.i=i;
 	}
 }
+
+class Glass5<T extends Liquid5>{
+public List<? extends Liquid5> lil =new ArrayList<>();	
+public Glass5(T p) {
+}
+public <T> T add(T p) {
+	return p;
+}
+}
+class Liquid5{}
