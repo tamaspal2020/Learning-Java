@@ -13,6 +13,7 @@ public class Center {
 	
 public static void fire(Gun g) {
 	g.go();
+	int x=52435;
 }
 	
 }
