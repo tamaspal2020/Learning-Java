@@ -12,7 +12,7 @@ public class LinkedListDemo {
 		l.add(234);		
 	}
 	public void countLinkedListLength(LinkedList<Integer> l) {
-		l.
+		
 	}
 	
 
