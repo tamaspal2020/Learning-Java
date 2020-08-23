@@ -95,12 +95,28 @@ public class Pract {
 		 * 	extends adds flexibility to return types, but disables method parameter types
 			super adds flexibility to method parameter types, but makes return types not useful
 		 * */
+		String nev="XYXYXYXY";
+		Reszleg<Fuvos> rf=new Reszleg<Fuvos>();
+		Gene<Reszleg<Fuvos>,String, Integer> genetest=new Gene<Reszleg<Fuvos>,String, Integer>(5);
+		System.out.println(gentest.)
 	}	
 	public void kiker(Hangszertipus h) {
 		System.out.println(h.getClass().getTypeName());
 	}
+	
 }
-
+class Gene<U, T, E>{
+	
+	private E b;
+	public Gene(E u) {
+		
+		this.b=u;
+	}
+	public static <C> C fug(C p) {    
+		C k=p;		
+		return k;
+	}
+}
 class GenericC<T>{
 	private T mezo;	
 	public ArrayList<T> lista=new ArrayList<T>();
