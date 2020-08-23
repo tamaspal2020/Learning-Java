@@ -5,14 +5,15 @@ import java.util.LinkedList;
 public class LinkedListDemo {
 
 	public static void main(String[] args) {
-		LinkedList<Integer> linl=new LinkedList<>();
-		for(int i=0; i<10; i++){
-			linl.add(i, i);
-		}
-		for(int i=0; i<10; i++){
-			System.out.println(linl.get(i));
-		}
-
+	LinkedList<Integer> l=new LinkedList<>();
+		l.add(10);
+		l.add(140);
+		l.add(1);
+		l.add(234);		
 	}
+	public void countLinkedListLength(LinkedList<Integer> l) {
+		l.
+	}
+	
 
 }
