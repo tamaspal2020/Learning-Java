@@ -7,7 +7,7 @@ public class BuyaShovel{
 		int r=sc.nextInt();
 		if(k<r) {
 			if(r%k==0) System.out.println(r/k);
-			if(r%k!=0) {
+			if(r%k!=0) {	
 				
 			}
 			}
