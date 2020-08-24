@@ -11,7 +11,7 @@ public class BuyaShovel{
 				if(10%k==0) {System.out.println(10/k);}
 				else {
 					int x=k; int y=1;
-					while((x+r)%k!=0 || x%k==0) {
+					while(x%10!=0 && (x+r)%k!=0) {
 						x+=k; y++;
 					}
 					System.out.println(y);
