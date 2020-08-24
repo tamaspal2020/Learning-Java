@@ -10,8 +10,8 @@ public class BuyaShovel{
 			if(r%k!=0) {	
 				if(10%k==0) {System.out.println(10/k);}
 				else {
-					int x=10; int y=x/k;
-					while((x+r)%k!=0) {
+					int x=k; int y=1;
+					while((x+r)%k!=0 || x%k==0) {
 						x+=k; y++;
 					}
 					System.out.println(y);
