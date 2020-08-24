@@ -8,6 +8,14 @@ public class BuyaShovel{
 		if(k<r) {
 			if(r%k==0) System.out.println(r/k);
 			if(r%k!=0) {	
+				if(10%k==0) {System.out.println(10/k);}
+				else {
+					int x=10;
+					while((x+r)%k!=0) {
+						
+					}
+				}
+			
 				
 			}
 			}
