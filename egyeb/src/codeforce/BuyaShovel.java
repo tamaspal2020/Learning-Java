@@ -5,7 +5,12 @@ public class BuyaShovel{
 		Scanner sc=new Scanner(System.in);
 		int k=sc.nextInt();
 		int r=sc.nextInt();
-		if(k<r && r%k==0) {System.out.println(r/k); }
+		if(k<r) {
+			if(r%k==0) System.out.println(r/k);
+			if(r%k!=0) {
+				
+			}
+			}
 		else
 		{
 		if (k==r || k==10) {System.out.println(1); }
