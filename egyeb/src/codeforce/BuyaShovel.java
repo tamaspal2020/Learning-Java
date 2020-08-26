@@ -19,20 +19,3 @@ public class BuyaShovel{
 			
 				
 			}
-			}
-		else
-		{
-		if (k==r || k==10) {System.out.println(1); }
-		else {
-		if(k<10 || k>10){
-			int sum=10;
-			int n=1 ;
-		while(((sum+r)%k)!=0 && sum!=k*10 && sum%k!=0){
-			sum+=10;
-		}
-			if(sum==k*10) System.out.println(10);
-			if (sum!=k*10) System.out.println((sum+r)/k);
-		}
-		}}
-}
-}
