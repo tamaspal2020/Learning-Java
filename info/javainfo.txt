@@ -1,0 +1,30 @@
+
+public class javainfo {
+
+cast interface class upcast downcast if statement 
+	if (s instanceof SmallShip) {
+		((SmallShip)s).rakodoter+=a;	
+		}
+ feltételes kiíratás if statement print
+ System.out.print(M>C?"Mishka":"Chris");
+ 
+ interface usage: a manager or another program gives the programmer the methods he has to implement
+ abstract class usage: generalization
+ 
+ public enum EnumImplementingInterface implements MyInterface {
+    FIRST("First Value"), SECOND("Second Value");
+
+
+    private String description = null;
+
+    private EnumImplementingInterface(String desc){
+        this.description = desc;
+    }
+
+    @Override
+    public String getDescription() {
+        return this.description;
+    }
+}
+
+interface default method
