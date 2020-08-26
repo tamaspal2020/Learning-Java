@@ -11,6 +11,6 @@ public class DiagonalWalking {
 			n--;
 		}
 	}
-	System.out.println(n+1);  ///rtzertzertezertzertze
+	System.out.println(n+1);  ///45634563456354
 }
 }
