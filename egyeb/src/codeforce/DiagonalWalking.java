@@ -11,6 +11,56 @@ public class DiagonalWalking {
 			n--;
 		}
 	}
-	System.out.println(n+1);  ///45634563456354
+	System.out.println(n+1);  ///456345634563543453453
 }
 }
+
+
+/*
+ * fsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgsklfsidfhsdfkjghslkdfjghls
+ * sdfksgjdlfksgjf
+ * skdfjhgskl
+ * */
+ */
