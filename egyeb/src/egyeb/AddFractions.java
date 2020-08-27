@@ -12,7 +12,7 @@ public class AddFractions {
 class Fract{
 	public boolean recognizeFract(String s) {
 		boolean fract=false;
-		
+		char[] ch=s.toCharArray();
 		Set<>
 		return fract;
 	}
