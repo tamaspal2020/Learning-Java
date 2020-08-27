@@ -26,7 +26,10 @@ static Random rand;
 		//The load factor describes what is the maximum fill level, above which, a set will need to be resized.
 		//A low initial capacity reduces space complexity but increases the frequency of rehashing which is an expensive process.
 		//On the other hand, a high initial capacity increases the cost of iteration and the initial memory consumption.
-		
+		/*
+		 * 	A high initial capacity is good for a large number of entries coupled with little to no iteration
+			A low initial capacity is good for few entries with a lot of iteration
+		 * */
 		
 	}
 public static void fillSet(Set<Integer> s, int i) {
