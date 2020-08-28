@@ -20,7 +20,12 @@ void kiir(int i){
 }
 
 class B{
-	A otherclass=new A();
+	public A otherclass=new A();
+	void create() {
+	for (int i=0; i<10; i++) {
+		
+	}
+	}
 }
 
 
