@@ -8,3 +8,15 @@ public class Classes {
 	}
 
 }
+
+class A{
+public A() {
+	
+}	
+}
+
+class B{
+	
+}
+
+
