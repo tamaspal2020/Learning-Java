@@ -16,7 +16,7 @@ public A() {
 }
 
 class B{
-	
+	A otherclass=new A();
 }
 
 
