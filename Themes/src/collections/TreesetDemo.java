@@ -1,6 +1,7 @@
 package collections;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -14,5 +15,7 @@ public class TreesetDemo {
 		tres.add("dddd");
 		tres.add("tzdfsg");
 		System.out.println(tres);
+		Iterator<String> it = tres.iterator();
+		it.
 	}
 }
