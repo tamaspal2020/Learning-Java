@@ -25,6 +25,10 @@ public class ListDemo {
 		System.out.printf("%s\n" ,szamok);
 		Collections.sort(szamok, Collections.reverseOrder());
 		System.out.printf("%s\n" ,szamok);
+		ArrayList<Integer> listaa =new ArrayList<>();
+		listaa.add(1); listaa.add(21); listaa.add(134); listaa.add(12); listaa.add(143);
+		listaa.trimToSize();
+		System.out.println(listaa);
 	}
 }
 
