@@ -16,6 +16,6 @@ public class TreesetDemo {
 		tres.add("tzdfsg");
 		System.out.println(tres);
 		Iterator<String> it = tres.iterator();
-		it.
+		
 	}
 }
