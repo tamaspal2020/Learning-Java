@@ -1,6 +1,8 @@
 package collections;
 
+import java.util.LinkedList;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class QueueDemo {
 
@@ -16,6 +18,7 @@ public class QueueDemo {
 			pq.poll();
 			System.out.println(pq.peek());
 			System.out.println(pq.size());
+			Queue<String> q=new LinkedList<>();
 
 	}
 
