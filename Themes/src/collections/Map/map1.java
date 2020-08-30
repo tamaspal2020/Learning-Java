@@ -67,7 +67,10 @@ class Megye{
 class Varos{
 	private String nev;
 	private int area;
-	private Map<Kerulet, LinkedList<Utca> keruletek=new HashMap<>();
+	private Map<Kerulet, LinkedList<Utca>> keruletek=new HashMap<>();
+}
+class Kerulet{
+	
 }
 class Utca{
 	
