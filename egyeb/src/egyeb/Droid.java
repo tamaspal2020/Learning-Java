@@ -2,8 +2,9 @@ package egyeb;
 
 public class Droid {
 
-	public Droid() {
-		
+	public Droid(long l, String s) {
+		setId(l);
+		setName(s);
 	}
 	@Override
 	public int hashCode() {
