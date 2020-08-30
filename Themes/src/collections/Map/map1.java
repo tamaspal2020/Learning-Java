@@ -2,6 +2,7 @@ package collections.Map;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
@@ -23,7 +24,7 @@ class Orszag{
 	private String penznem;
 	private String area;
 	private String nepesseg;
-	private Map<Megye, LinkedList<Varos>> megyekvarosok=new HashMap<>();
+	private Map<Megye, Set<Varos>> megyekvarosok=new HashMap<>();
 	public String getNev() {
 		return nev;
 	}
@@ -48,10 +49,10 @@ class Orszag{
 	public void setNepesseg(String nepesseg) {
 		this.nepesseg = nepesseg;
 	}
-	public Map<Megye, LinkedList<Varos>> getMegyekvarosok() {
+	public Map<Megye, Set<Varos>> getMegyekvarosok() {
 		return megyekvarosok;
 	}
-	public void setMegyekvarosok(Map<Megye, LinkedList<Varos>> megyekvarosok) {
+	public void setMegyekvarosok(Map<Megye, Set<Varos>> megyekvarosok) {
 		this.megyekvarosok = megyekvarosok;
 	}
 }
@@ -66,5 +67,8 @@ class Megye{
 class Varos{
 	private String nev;
 	private int area;
-	private
+	private Map<Kerulet, LinkedList<Utca> keruletek=new HashMap<>();
+}
+class Utca{
+	
 }
