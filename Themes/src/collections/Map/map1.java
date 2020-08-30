@@ -13,6 +13,9 @@ public class map1 {
 		Map<Foldresz, ArrayList<Orszag>> terkep=new HashMap<>();
 
 	}
+	public void utcaAddtoKerulet(int id, String name) {
+		Kerulet k=new Kerulet(id, name);
+	}
 
 }
 class Foldresz{
@@ -68,10 +71,44 @@ class Varos{
 	private String nev;
 	private int area;
 	private Map<Kerulet, LinkedList<Utca>> keruletek=new HashMap<>();
+	public String getNev() {
+		return nev;
+	}
+	public void setNev(String nev) {
+		this.nev = nev;
+	}
+	public int getArea() {
+		return area;
+	}
+	public void setArea(int area) {
+		this.area = area;
+	}
+	public Map<Kerulet, LinkedList<Utca>> getKeruletek() {
+		return keruletek;
+	}
+	public void setKeruletek(Map<Kerulet, LinkedList<Utca>> keruletek) {
+		this.keruletek = keruletek;
+	}
 }
 class Kerulet{
-	
+	public static Set<Integer> idk=new HashSet<>();
+	private int num;
+	private String nev;
+	public Kerulet() {
+		
+	}
+	private Kerulet(int num, String nev) {
+		this.num = num;
+		this.nev = nev;
+		idk.add(num);
+	}
 }
 class Utca{
-	
+	private int hossz;
+	private String neve;
+	private Utca(int hossz, String neve) {
+		
+		this.hossz = hossz;
+		this.neve = neve;
+	}
 }
