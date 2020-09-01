@@ -1,6 +1,8 @@
 package FilmDisk;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -23,13 +25,15 @@ public class FilmDN extends RandomFilmGenerator{
 		Disk d3=new Disk(3,3000, csatltypes.SATA2);
 		Disk d4=new Disk(4,4500, csatltypes.SATA3);
 		d1.addFilm(createFilm());
+		d2.addFilm(createFilm());
+		d2.addFilm(createFilm());
 		nas1.addDisk(d1);
+		nas1.addDisk(d2);
 		nas1.contentprint();
 		
 	}	
 }
-class Nas{
-	
+class Nas{	
 	public int getMaxdisk() {
 		return maxdisk;
 	}
@@ -54,16 +58,16 @@ class Nas{
 	}
 	public LinkedList<String> filmeklistaja() {
 		LinkedList<String> list=new LinkedList<>();
-		for(Map.Entry<Disk, HashSet<Film>> e : dikslist.entrySet()){
-			String listaelem="";
-			   for(Disk e1 : dikslist.keySet()) {
-				   listaelem+=e1.hashCode()+" disknumber:"+e1.getId()+". (szabadhely:"+e1.getFreespace()+") - ";
-				   for(Film f1: e.getValue()) {
-					   listaelem+=f1.getTitle();
-				   }
-			   }
-			    list.add(listaelem); 
-			}
+		
+		for (Disk k:  dikslist.keySet()) {
+			 String listaelem="";
+		   listaelem+=k.getId();
+		    for (Film v: dikslist.get(k)) {
+		    	   listaelem+=v.getTitle();
+		    }
+		    list.add(listaelem);
+		
+		}
 		return list;
 	}
 	public void contentprint() {
@@ -75,6 +79,33 @@ class Nas{
 	public void addDisk(Disk d) {
 		dikslist.put(d, (HashSet<Film>)d.getfilmlista());
 		System.out.println("Disk aded");
+	}
+	public void menu() throws IOException {		
+		menupontok();
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		int choice=br.read();
+		while(choice!=0) {
+		switch(choice) {
+			
+		}
+		menupontok();
+		choice=br.read();
+		}
+		
+		}
+		
+
+	public void nasinfo() {
+		
+	}
+	private void menupontok() {
+		System.out.println("Kérem válasszon:");
+		System.out.println("1 . nas info");
+		System.out.println("2. film keresése");
+		System.out.println("3. film hozzáadása:");
+		System.out.println("4. film lejátszása:");
+		System.out.println("5. film törlése:");
+		System.out.println("0. Kilépés:");
 	}
 }
 
@@ -183,6 +214,7 @@ class Disk{
 	public boolean removeFilm(Film f) {
 		if(filmlista.contains(f)) {
 			filmlista.remove(f);
+			this.freespace+=f.getSize();
 			return true;
 		}
 		return false;
