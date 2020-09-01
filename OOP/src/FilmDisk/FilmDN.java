@@ -2,6 +2,7 @@ package FilmDisk;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -22,6 +23,7 @@ public class FilmDN extends RandomFilmGenerator{
 		Disk d3=new Disk(3,3000, csatltypes.SATA2);
 		Disk d4=new Disk(4,4500, csatltypes.SATA3);
 		d1.addFilm(createFilm());
+		nas1.addDisk(d1);
 		nas1.contentprint();
 		
 	}	
@@ -43,19 +45,19 @@ class Nas{
 		return freecapacity;
 	}
 	private int maxdisk;
-	public Map<Disk, HashSet<Film>> dikslist;
+	public Map<Disk, HashSet<Film>> dikslist=new HashMap<Disk, HashSet<Film>>();
 	private int freecapacity; 
 	public Film playFilm(String title)
 	{
 		Film f=null;
 		return f;
 	}
-	public LinkedList filmeklistaja() {
+	public LinkedList<String> filmeklistaja() {
 		LinkedList<String> list=new LinkedList<>();
 		for(Map.Entry<Disk, HashSet<Film>> e : dikslist.entrySet()){
-			String listaelem=null;
+			String listaelem="";
 			   for(Disk e1 : dikslist.keySet()) {
-				   listaelem+=e1.hashCode()+" disk :"+e1.getId()+". (szabadhely:"+e1.getFreespace()+") - ";
+				   listaelem+=e1.hashCode()+" disknumber:"+e1.getId()+". (szabadhely:"+e1.getFreespace()+") - ";
 				   for(Film f1: e.getValue()) {
 					   listaelem+=f1.getTitle();
 				   }
@@ -69,6 +71,10 @@ class Nas{
 		for(int i=0; i<lista.size();i++) {
 			System.out.println(lista.get(i));
 		}
+	}
+	public void addDisk(Disk d) {
+		dikslist.put(d, (HashSet<Film>)d.getfilmlista());
+		System.out.println("Disk aded");
 	}
 }
 
@@ -141,6 +147,7 @@ class Disk{
 		}
 		else {
 			this.size = size;
+			this.freespace=size;
 		}
 		this.cs=cs;
 		setId(id);
@@ -154,7 +161,10 @@ class Disk{
 	private int size;
 	private csatltypes cs;
 	private int freespace;
-	private Set<Film> filmlista=new HashSet<>();
+	private HashSet<Film> filmlista=new HashSet<>();
+	public HashSet<Film> getfilmlista (){
+		return this.filmlista;
+	}
 	public void addFilm(Film f) {
 		if(filmlista.contains(f)) {
 			System.out.println("Ez a film már létezik.");
@@ -165,6 +175,8 @@ class Disk{
 			}
 			else{
 				filmlista.add(f);
+				this.freespace-=f.getSize();
+				System.out.println("Film added");
 			}
 		}		
 	}	
