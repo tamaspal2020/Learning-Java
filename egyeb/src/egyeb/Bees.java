@@ -12,6 +12,7 @@ public class Bees {
 	public static void main(String[] args) throws IOException {
 	   BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); 	
 	   String flowers=br.readLine();
+	   ArrayList<Colors> distances
 	}
 
 }
