@@ -10,5 +10,6 @@ public class Bees {
 
 }
 class Bee{
-	
+	int distance;
+	char color;
 }
