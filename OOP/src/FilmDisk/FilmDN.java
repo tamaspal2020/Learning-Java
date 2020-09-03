@@ -90,6 +90,8 @@ class Nas{
 		case 1 :  
 		nasinfo();
 		break;
+		default :
+			break;
 		}		
 		menupontok();
 		choice=br.read();		
