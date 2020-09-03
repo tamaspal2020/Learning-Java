@@ -97,7 +97,7 @@ class Nas{
 		
 
 	public void nasinfo() {
-		System.out
+		System.out.println("info about storage");
 	}
 	private void menupontok() {
 		System.out.println("Kérem válasszon:");
