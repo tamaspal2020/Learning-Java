@@ -91,6 +91,8 @@ class Nas{
 		nasinfo();
 		break;
 		}
+		
+		
 		menupontok();
 		choice=br.read();
 		
