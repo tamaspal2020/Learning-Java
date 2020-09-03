@@ -110,7 +110,6 @@ class Nas{
 		System.out.println("5. film törlése:");
 		System.out.println("0. Kilépés:");
 	}
-
 }
 
 class Film{
