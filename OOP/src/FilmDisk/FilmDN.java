@@ -84,9 +84,9 @@ class Nas{
 	}
 	public void menu() throws IOException {		
 		menupontok();
-		Scanner sc=new Scanner(System.in),
+		Scanner sc=new Scanner(System.in);
 		int choice=sc.nextInt();
-		System.out.println("choice:"+choice);
+		while(choice!=0) {
 		switch(choice) {
 		case 1 :  
 		nasinfo();
@@ -95,11 +95,11 @@ class Nas{
 			break;
 		}		
 		 menupontok();
-		choice=br.read();		
-		
+		choice=sc.nextInt();		
+		}
 	}
 	public void nasinfo() {
-		System.out.println("info about storage");
+		System.out.println("Info about storage");
 	}
 	private void menupontok() {
 		System.out.println("Kérem válasszon:");
@@ -110,6 +110,7 @@ class Nas{
 		System.out.println("5. film törlése:");
 		System.out.println("0. Kilépés:");
 	}
+
 }
 
 class Film{
