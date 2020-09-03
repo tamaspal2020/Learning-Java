@@ -90,13 +90,9 @@ class Nas{
 		case 1 :  
 		nasinfo();
 		break;
-		}
-		
-		
+		}		
 		menupontok();
-		choice=br.read();
-		
-		
+		choice=br.read();		
 		}
 	}
 
