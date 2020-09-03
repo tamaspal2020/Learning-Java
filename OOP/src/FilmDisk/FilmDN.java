@@ -93,7 +93,7 @@ class Nas{
 		default :
 			break;
 		}		
-		menupontok();
+		
 		choice=br.read();		
 		}
 	}
@@ -103,7 +103,7 @@ class Nas{
 	}
 	private void menupontok() {
 		System.out.println("Kérem válasszon:");
-		System.out.println("1 . nas info");
+		System.out.println("1. nas info");
 		System.out.println("2. film keresése");
 		System.out.println("3. film hozzáadása:");
 		System.out.println("4. film lejátszása:");
