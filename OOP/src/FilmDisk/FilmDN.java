@@ -29,6 +29,7 @@ public class FilmDN extends RandomFilmGenerator{
 		d2.addFilm(createFilm());
 		nas1.addDisk(d1);
 		nas1.addDisk(d2);
+		nas1.menu();
 		nas1.contentprint();
 		
 	}	
@@ -86,7 +87,7 @@ class Nas{
 		int choice=br.read();
 		while(choice!=0) {
 		switch(choice) {
-			
+		case:1 
 		}
 		menupontok();
 		choice=br.read();
@@ -96,7 +97,7 @@ class Nas{
 		
 
 	public void nasinfo() {
-		
+		System.out
 	}
 	private void menupontok() {
 		System.out.println("Kérem válasszon:");
