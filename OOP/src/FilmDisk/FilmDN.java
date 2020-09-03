@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.RandomAccess;
+import java.util.Scanner;
 import java.util.Set;
 
 
@@ -83,9 +84,9 @@ class Nas{
 	}
 	public void menu() throws IOException {		
 		menupontok();
-		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		int choice=br.read();
-		while(choice!=0) {
+		Scanner sc=new Scanner(System.in),
+		int choice=sc.nextInt();
+		System.out.println("choice:"+choice);
 		switch(choice) {
 		case 1 :  
 		nasinfo();
@@ -93,11 +94,10 @@ class Nas{
 		default :
 			break;
 		}		
-		
+		 menupontok();
 		choice=br.read();		
-		}
+		
 	}
-
 	public void nasinfo() {
 		System.out.println("info about storage");
 	}
