@@ -87,14 +87,16 @@ class Nas{
 		int choice=br.read();
 		while(choice!=0) {
 		switch(choice) {
-		case:1 
+		case 1 :  
+		nasinfo();
+		break;
 		}
 		menupontok();
 		choice=br.read();
-		}
+		
 		
 		}
-		
+	}
 
 	public void nasinfo() {
 		System.out.println("info about storage");
