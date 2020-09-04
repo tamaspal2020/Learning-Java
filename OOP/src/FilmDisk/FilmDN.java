@@ -14,28 +14,30 @@ import java.util.Random;
 import java.util.RandomAccess;
 import java.util.Scanner;
 import java.util.Set;
-
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 
 public class FilmDN extends RandomFilmGenerator{
 	
 	public static void main(String[] args) throws Exception {
 		Nas nas1=new Nas();
-		Disk d1=new Disk(1,200, csatltypes.ATA);
+		Disk d1=new Disk(1,2000, csatltypes.ATA);
 		Disk d2=new Disk(2,1000, csatltypes.SATA);
 		Disk d3=new Disk(3,3000, csatltypes.SATA2);
 		Disk d4=new Disk(4,4500, csatltypes.SATA3);
+		d1.addFilm(createFilm());
+		d1.addFilm(createFilm());
 		d1.addFilm(createFilm());
 		d2.addFilm(createFilm());
 		d2.addFilm(createFilm());
 		nas1.addDisk(d1);
 		nas1.addDisk(d2);
 		nas1.menu();
-		nas1.contentprint();
-		
+				
 	}	
 }
-class Nas{	
+class Nas implements Comparable<TreeMap<Disk, HashSet<Film>>>{	
 	public int getMaxdisk() {
 		return maxdisk;
 	}
@@ -51,7 +53,8 @@ class Nas{
 		return freecapacity;
 	}
 	private int maxdisk;
-	public Map<Disk, HashSet<Film>> dikslist=new HashMap<Disk, HashSet<Film>>();
+	//public Map<Disk, HashSet<Film>> dikslist=new HashMap<Disk, HashSet<Film>>();  
+	public Map<Disk, HashSet<Film>> dikslist=new TreeMap<Disk, HashSet<Film>>();
 	private int freecapacity; 
 	public Film playFilm(String title)
 	{
@@ -62,13 +65,14 @@ class Nas{
 		LinkedList<String> list=new LinkedList<>();
 		
 		for (Disk k:  dikslist.keySet()) {
-			 String listaelem="";
-		   listaelem+=k.getId();
+			 
+		   //listaelem+=k.getId();
 		    for (Film v: dikslist.get(k)) {
-		    	   listaelem+=v.getTitle();
+		    	String listaelem="";
+		    	   listaelem+=k.getId()+v.getTitle();
+		    	   list.add(listaelem);
 		    }
-		    list.add(listaelem);
-		
+		 		
 		}
 		return list;
 	}
@@ -89,7 +93,9 @@ class Nas{
 		while(choice!=0) {
 		switch(choice) {
 		case 1 :  
-		nasinfo();
+			contentprint();
+		case 2 :  
+			nasinfo();
 		break;
 		default :
 			break;
@@ -99,17 +105,36 @@ class Nas{
 		}
 	}
 	public void nasinfo() {
-		System.out.println("Info about storage");
+		int diskszam=dikslist.size();
+		System.out.println("Diskek száma:"+diskszam);
+		System.out.println("Disk adatok: ");
+		for (Disk k:  dikslist.keySet()) {
+			 int id=k.getId();
+			 int size=k.getSize();
+			 int freespace=k.getFreespace();
+			 csatltypes csatl=k.getCs();
+			 System.out.println("Disk "+id+".");
+			 System.out.println("Csatlakozás: "+csatl);
+			 System.out.println("Teljes méret:"+size);
+			 System.out.println("Felhasználható: "+freespace);			 
+			}
 	}
 	private void menupontok() {
 		System.out.println("Kérem válasszon:");
 		System.out.println("1. nas info");
-		System.out.println("2. film keresése");
-		System.out.println("3. film hozzáadása:");
-		System.out.println("4. film lejátszása:");
-		System.out.println("5. film törlése:");
+		System.out.println("2. filmlista");
+		System.out.println("3. film keresése");
+		System.out.println("4. film hozzáadása:");
+		System.out.println("5. film lejátszása:");
+		System.out.println("6. film törlése:");
 		System.out.println("0. Kilépés:");
 	}
+	@Override
+	public int compareTo(TreeMap<Disk, HashSet<Film>> arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
 
 class Film{
@@ -194,6 +219,9 @@ class Disk{
 	}
 	private int size;
 	private csatltypes cs;
+	public csatltypes getCs() {
+		return cs;
+	}
 	private int freespace;
 	private HashSet<Film> filmlista=new HashSet<>();
 	public HashSet<Film> getfilmlista (){
@@ -235,7 +263,13 @@ class Disk{
 		return f;
 	}
 }
-enum csatltypes{ATA, SATA,SATA2, SATA3};
+enum csatltypes{
+	ATA, SATA,SATA2, SATA3;
+public void printcs() {
+	
+}	
+
+};
 
 class RandomFilmGenerator{
 	static Random rand=new Random();
