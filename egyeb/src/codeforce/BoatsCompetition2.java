@@ -1,5 +1,6 @@
 package codeforce;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -14,7 +15,7 @@ public class BoatsCompetition2 {
 		Scanner sc=new Scanner(System.in);
 		int tc=sc.nextInt();
 		int[] result=new int[tc];
-		Map<Integer, HashSet<Integer>> possibleteams =new HashMap<>();
+		Map<Integer, ArrayList<Integer>> possibleteams =new HashMap<>();
 		LinkedList<Integer> sulyok=new LinkedList<>();
 		
 		
@@ -23,7 +24,7 @@ public class BoatsCompetition2 {
 			possibleteams.clear();
 			int n=sc.nextInt();
 			if(n==1 ) {
-				System.out.println(1);
+				result[i]=1;
 			}
 			else {
 			for(int j=0;j<n;j++) {
@@ -43,20 +44,23 @@ public class BoatsCompetition2 {
 		System.out.println(possibleteams);
 	}
 
-	public static HashSet<Integer> pairswithWweight(int w, LinkedList<Integer> sortedl) {
-		HashSet<Integer> teams=new HashSet<Integer>();
+	public static ArrayList<Integer> pairswithWweight(int w, LinkedList<Integer> sortedl) {
+		HashSet<Integer> indexes=new HashSet<Integer>();
+		ArrayList<Integer> members=new ArrayList<>();
 		for(int i=0; i<sortedl.size()-1; i++) {
 			for(int j=i+1; j<sortedl.size(); j++) {
 				if( (sortedl.get(i)+sortedl.get(j))==w ) {
-					if( !(teams.contains(sortedl.get(i)))  &&   !(teams.contains(sortedl.get(i)))    )
+					if( !(indexes.contains(i))  &&   !(indexes.contains(j))    )
 							{
-						teams.add(sortedl.get(i));
-						teams.add(sortedl.get(j));
+						members.add(sortedl.get(i));
+						members.add(sortedl.get(j));
+						indexes.add(i);
+						indexes.add(j);
 							}
 				}
 			}
 		}
-		return teams;
+		return members;
 	}
 
 	}
