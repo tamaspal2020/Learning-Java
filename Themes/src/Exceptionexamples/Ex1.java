@@ -12,17 +12,23 @@ public class Ex1 {
 			System.out.println("Division by zero");
 		}
 		System.out.println("After the code");
+		try {
+			intcontrol(3);
+		}
+		catch(nemParosException e) {
+			System.out.println("Nem páros szám");
+		}
+		
 		
 	}
-	public static void intcontrol(int a) {
+	public static void intcontrol(int a) throws nemParosException {
 		if(a%2!=0) {
 			throw new nemParosException("fg"); 
 		}
 	}
-	class nemParosException extends Exception{
-		nemParosException(String etext){
-			
-		}
+}
+class nemParosException extends Exception{
+	nemParosException(String etext){
+		///super(etext);
 	}
-
 }
