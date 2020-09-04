@@ -14,5 +14,15 @@ public class Ex1 {
 		System.out.println("After the code");
 		
 	}
+	public static void intcontrol(int a) {
+		if(a%2!=0) {
+			throw new nemParosException("fg"); 
+		}
+	}
+	class nemParosException extends Exception{
+		nemParosException(String etext){
+			
+		}
+	}
 
 }
