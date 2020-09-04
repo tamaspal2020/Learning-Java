@@ -11,6 +11,7 @@ public class Ex1 {
 		catch(ArithmeticException e) {
 			System.out.println("Division by zero");
 		}
+		System.out.println("After the code");
 		
 	}
 
