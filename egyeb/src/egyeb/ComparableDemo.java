@@ -21,11 +21,21 @@ class Disk implements Comparable{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	Disk(int id){
-		
+	Disk(int id) throws ExistingIdException {
+		try {
+			if(idlist.contains(id) {
+				throw new ExistingIdException("Az id már létezik");
+			} 
+			this.id=id;
+		}
+		catch(ExistingIdException e) {
+			System.out
+		}
 	}
 	class ExistingIdException extends Exception{
-		
+		ExistingIdException(String text){
+			super(text);
+		}
 	}
 	
 }
