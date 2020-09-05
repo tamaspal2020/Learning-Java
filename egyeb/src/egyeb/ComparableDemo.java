@@ -1,10 +1,15 @@
 package egyeb;
 
+import java.util.TreeMap;
+
 public class ComparableDemo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		TreeMap<Disk, Integer> disklist=new TreeMap<>();
 
 	}
 
+}
+class Disk{
+	
 }
