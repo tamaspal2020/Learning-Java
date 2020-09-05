@@ -54,7 +54,7 @@ class Nas implements Comparable<TreeMap<Disk, HashSet<Film>>>{
 	}
 	private int maxdisk;
 	//public Map<Disk, HashSet<Film>> dikslist=new HashMap<Disk, HashSet<Film>>();  
-	public Map<Disk, HashSet<Film>> dikslist=new TreeMap<Disk, HashSet<Film>>();
+	public Map<Disk, TreeSet<Film>> dikslist=new HashMap<Disk, TreeSet<Film>>();
 	private int freecapacity; 
 	public Film playFilm(String title)
 	{
@@ -83,7 +83,7 @@ class Nas implements Comparable<TreeMap<Disk, HashSet<Film>>>{
 		}
 	}
 	public void addDisk(Disk d) {
-		dikslist.put(d, (HashSet<Film>)d.getfilmlista());
+		dikslist.put(d, (TreeSet<Film>)d.getfilmlista());
 		System.out.println("Disk aded");
 	}
 	public void menu() throws IOException {		
@@ -137,7 +137,7 @@ class Nas implements Comparable<TreeMap<Disk, HashSet<Film>>>{
 
 }
 
-class Film{
+class Film implements Comparable<Film>{
 	private Film(String title, int length) {
 		super();
 		this.title = title;
@@ -188,9 +188,13 @@ class Film{
 	private int  length;
 	private boolean hd;
 	private int size;
+	@Override
+	public int compareTo(Film f) {
+		return this.getTitle().compareTo(f.getTitle());
+	}
 	
 }
-class Disk{
+class Disk implements Comparable<Disk>{
 	private int id;
 	public int getId() {
 		return id;
@@ -223,8 +227,8 @@ class Disk{
 		return cs;
 	}
 	private int freespace;
-	private HashSet<Film> filmlista=new HashSet<>();
-	public HashSet<Film> getfilmlista (){
+	private TreeSet<Film> filmlista=new TreeSet<>();
+	public TreeSet<Film> getfilmlista (){
 		return this.filmlista;
 	}
 	public void addFilm(Film f) {
@@ -261,6 +265,12 @@ class Disk{
 			}
 		}
 		return f;
+	}
+	@Override
+	public int compareTo(Disk d) {
+		if (this.id==d.getId()) return 0;
+		if (this.id<d.getId()) return -1;
+		return 1;
 	}
 }
 enum csatltypes{
