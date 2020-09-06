@@ -83,8 +83,7 @@ class Nas implements Comparable<TreeMap<Disk, HashSet<Film>>>{
 		}
 	}
 	public void addDisk(Disk d) {
-		dikslist.put(d, (TreeSet<Film>)d.getfilmlista());
-		System.out.println("Disk aded");
+		dikslist.put(d, (TreeSet<Film>)d.getfilmlista());		
 	}
 	public void menu() throws IOException {		
 		menupontok();
@@ -94,7 +93,8 @@ class Nas implements Comparable<TreeMap<Disk, HashSet<Film>>>{
 		switch(choice) {
 		case 1 :  
 			contentprint();
-		case 2 :  
+			break;
+		case 6 :  
 			nasinfo();
 		break;
 		default :
@@ -121,12 +121,12 @@ class Nas implements Comparable<TreeMap<Disk, HashSet<Film>>>{
 	}
 	private void menupontok() {
 		System.out.println("Kérem válasszon:");
-		System.out.println("1. nas info");
-		System.out.println("2. filmlista");
-		System.out.println("3. film keresése");
-		System.out.println("4. film hozzáadása:");
-		System.out.println("5. film lejátszása:");
-		System.out.println("6. film törlése:");
+		System.out.println("1. Filmek listája");
+		System.out.println("2. film keresése");
+		System.out.println("3. film hozzáadása:");
+		System.out.println("4. film lejátszása:");
+		System.out.println("5. film törlése:");
+		System.out.println("6. Nas Info:");
 		System.out.println("0. Kilépés:");
 	}
 	@Override
@@ -242,7 +242,7 @@ class Disk implements Comparable<Disk>{
 			else{
 				filmlista.add(f);
 				this.freespace-=f.getSize();
-				System.out.println("Film added");
+				
 			}
 		}		
 	}	
@@ -298,7 +298,7 @@ class RandomFilmGenerator{
 			{
 				hossz++;
 			}
-			System.out.println(hossz);
+			
 			raf.close();
 		}
 		catch(IOException e){
@@ -313,7 +313,7 @@ class RandomFilmGenerator{
 				title=raf.readLine();
 			}
 			raf.close();
-			System.out.println(title);
+			;
 		}
 		catch(IOException e){
 			e.getMessage();
