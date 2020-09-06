@@ -9,15 +9,13 @@ public class Sky{
 		Cloud c1=new Cloud();
 		Cloud c2=new Cloud();			
 		clouds.add(c1);
-		clouds.add(c2);
-
-		
+		clouds.add(c2);		
 	}
-	public static Cloud mergeClouds(Cloud c1, Cloud c2) {
+	public static void mergeClouds(Cloud c1, Cloud c2) {
 		Cloud c3=new Cloud();
 		clouds.remove(c1);
 		clouds.remove(c2);
-		return c3;				
+		clouds.add(c3);						
 	}
 }
 
