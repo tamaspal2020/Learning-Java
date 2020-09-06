@@ -18,7 +18,7 @@ public class Sky{
 		clouds.remove(c1);
 		clouds.remove(c2);
 		clouds.add(c3);						
-	}
+	}	
 }
 
 class Cloud{
@@ -35,5 +35,12 @@ class Cloud{
 		this.x=rand.nextInt(40000);
 		this.y=rand.nextInt(40000);
 		this.height=rand.nextInt(20000);
+	}
+	public Cloud(double x)
+}
+
+class Control{
+	public void listClouds(Set<Cloud> cloudset){
+		
 	}
 }
