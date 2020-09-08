@@ -10,6 +10,6 @@ public class T {
 	        int m=Integer.parseInt(y[1]);
 	        int a=Integer.parseInt(y[2]);
 	        int b=Integer.parseInt(y[3]);					
-	        System.out.print((b/m>=a)?n*a:n<m?(b<n*a?b:a):n%m!=0?(b<a?(n/m)*b+b:(n/m)*b+a*(n%m)):(n/m)*b);
+	        System.out.print((b/m>=a)?n*a:n<m?(b<n*a?b:a):n%m!=0?(b<a?(n/m)*b+b:(n/m)*b+a*(n%m)):(n/m)*b);   //nested ternary operators
 	}
 }
