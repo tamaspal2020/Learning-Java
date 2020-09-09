@@ -8,7 +8,7 @@ static Set<Wave> waves=new HashSet<>();
 	public static void main(String[] args) {
 		Wave w1=new Wave(10, 10, 20);
 		Wave w2=new Wave(10, 10, 20);
-	
+		System.out.println("teszt");
 		waves.add(w1);
 		waves.add(w2);
 		for(Wave w : waves) {
