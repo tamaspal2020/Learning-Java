@@ -36,9 +36,9 @@ class Cloud{
 		this.y=rand.nextInt(40000);
 		this.height=rand.nextInt(20000);
 	}
-	public Cloud(double x)
+	public Cloud(double x) {
 }
-
+}
 class Control{
 	public void listClouds(Set<Cloud> cloudset){
 		
