@@ -50,6 +50,7 @@ class Cloud implements Comparable<Cloud>{
 		watercontent=1000d;  ///  rand.nextInt(100000);
 		this.rainintensity=rand.nextInt(3);
 	}
+<<<<<<< HEAD
 	public Cloud(double x, double y, double height, double watercontent) {
 		super();
 		this.x = x;
@@ -93,8 +94,11 @@ class Cloud implements Comparable<Cloud>{
 		if (this.watercontent>c.watercontent) return 1;
 		return -1;
 	}	
+=======
+	public Cloud(double x) {
+>>>>>>> branch 'master' of https://github.com/tamaspal2020/Learning-Java.git
 }
-
+}
 class Control{
 	public void listClouds(Set<Cloud> cloudset){
 		for(Cloud c :  cloudset) {
