@@ -82,5 +82,10 @@ class StringInsteadofnNumberException extends Exception {
 		super(szoveg);
 	}	
 }
+class BooleanInsteadofnNumberException extends Exception{
+	BooleanInsteadofnNumberException(String szoveg){
+		super(szoveg);
+}
+}
 
 
