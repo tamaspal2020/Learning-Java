@@ -7,7 +7,8 @@ public class V {
 		 BufferedReader x = new BufferedReader(new InputStreamReader(System.in));
 		 int b=Integer.parseInt(x.readLine());
 		 int c=Integer.parseInt(x.readLine());
-		 int d=Integer.parseInt(x.readLine());
+		 int d=Integer.parseInt(x.readLine());  
+		 int s=6;
 		 System.out.println((1+(((b>d&&c>d))?d:(b<=d&&c>d)?b:(b<d&&c<d)?b+c-d:c)));		 
 	}	
 }
