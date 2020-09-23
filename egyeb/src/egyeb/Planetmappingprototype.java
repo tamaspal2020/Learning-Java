@@ -9,5 +9,11 @@ public class Planetmappingprototype {
 
 }
 class Planet {
+	private Map
+}
+
+class Map{
+	public int width;
+	public int height;
 	
 }
