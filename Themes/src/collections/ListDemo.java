@@ -13,9 +13,7 @@ public class ListDemo {
 	public static void main(String[] args) {
 		Listtry l=new Listtry();
 		l.meth1();
-		l.IterateswithIterator();
-		
-		
+		l.IterateswithIterator();		
 		List<Integer> szamok=new ArrayList<>();
 		szamok.add(32);  //sfdgsfd
 		szamok.add(3);
