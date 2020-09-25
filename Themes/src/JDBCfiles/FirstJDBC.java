@@ -10,7 +10,7 @@ public class FirstJDBC {
 		
 		String query="select * from city";
 		
-		Class.forName("com.mysql.cj.jdbc.Driver");    
+		Class.forName("com.mysql.cj.jdbc.Driver");    ///Class.forName executes the static block of the class in parameter   
 		Connection con=DriverManager.getConnection(url, uname, pass);
 		
 		Statement st=con.createStatement();
