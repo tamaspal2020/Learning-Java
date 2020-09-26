@@ -6,7 +6,8 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.util.Scanner;
 
-public class ArrivalofthGeneral {
+public class ArrivalofthGeneral {///solution for the case when the 
+ //min and max can be at either side of the row
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		Scanner s=new Scanner(System.in);
@@ -43,16 +44,18 @@ public class ArrivalofthGeneral {
 					maxindex=t-tavjobb-1;
 				}
 			}
-			System.out.println(min+","+minindex);
+			System.out.println(minindex+","+maxindex);
 		}
 		if (minindex<maxindex) {
 			c+=minindex-1+(t-maxindex);
 		}
-		if (minindex<maxindex) {
-			c+=minindex-1+(t-maxindex);
+		if (minindex>maxindex) {
+			c+=maxindex-1+(t-minindex);
 		}
 		if (minindex==maxindex) {
 			c=0;
 		}
+		if(t==2) System.out.println(0);
+		if(t>2) System.out.println(c);
 	}
 }
