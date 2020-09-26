@@ -18,13 +18,35 @@ public class ArrivalofthGeneral {
 		int maxindex=0;
 		int max =0;
 		int c=0;
+		int tavbal=0;
+		int tavjobb=0;
 		for(int i=0;i<t;i++) {
 			a=s.nextInt();
-			if (a<min) {minindex=i;
+			tavbal=i;
+			tavjobb=t-i-1;
+			if (a<min) {
+				minindex=i;
+				min=a;
 			}
-		
+			if(a==min) {
+				if (tavjobb<minindex) {
+					minindex=t-tavjobb-1;
+					
+				}
+			}
+			if (a>max) {
+				maxindex=i;
+				max=a;
+			}
+			if(a==max) {
+				if(tavjobb<maxindex) {
+					maxindex=t-tavjobb-1;
+				}
+			}
+			System.out.println(min+","+minindex);
 		}
-		System.out.println(a);
+		System.out.println(minindex);
+		System.out.println(maxindex);
 
 }
 }
