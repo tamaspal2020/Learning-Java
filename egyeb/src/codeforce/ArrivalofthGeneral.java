@@ -45,8 +45,14 @@ public class ArrivalofthGeneral {
 			}
 			System.out.println(min+","+minindex);
 		}
-		System.out.println(minindex);
-		System.out.println(maxindex);
-
-}
+		if (minindex<maxindex) {
+			c+=minindex-1+(t-maxindex);
+		}
+		if (minindex<maxindex) {
+			c+=minindex-1+(t-maxindex);
+		}
+		if (minindex==maxindex) {
+			c=0;
+		}
+	}
 }
