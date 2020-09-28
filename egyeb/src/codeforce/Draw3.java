@@ -21,5 +21,7 @@ public class Draw3 {
 			 m=b;			
 		}
 		System.out.println(c);	
+		System.out.println(c+2);
+		
 	}
 }
