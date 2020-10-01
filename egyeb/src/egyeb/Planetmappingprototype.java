@@ -18,6 +18,7 @@ class Map{
 }
 
 class R{
+	private boolean isRented;
 	
 }
 
