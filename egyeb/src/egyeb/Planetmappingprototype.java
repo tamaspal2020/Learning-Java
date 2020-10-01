@@ -17,3 +17,7 @@ class Map{
 	public int height;	
 }
 
+class R{
+	
+}
+
