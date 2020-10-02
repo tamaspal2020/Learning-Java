@@ -11,6 +11,7 @@ public class AaD {
         int k3=Integer.parseInt(y[1]);
         int k5=Integer.parseInt(y[2]);
         int k6=Integer.parseInt(y[3]);
-        System.out.println(Math.min(k6,Math.min(k2,k5))*256 +Math.min(k3, k2-Math.min(k6,Math.min(k2,k5)))*32);        
+        int sum=Math.min(k6,Math.min(k2,k5))*256 +Math.min(k3, k2-Math.min(k6,Math.min(k2,k5)))*32;
+        System.out.println(sum);
 	}
 }
