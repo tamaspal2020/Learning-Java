@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 public class AaD {
 	public static void main(String[] args) throws IOException {
+		Scanner sc=new Scanner(System.in);
 		BufferedReader x = new BufferedReader(new InputStreamReader(System.in));
         String[] y=x.readLine().split(" ");
         int k2=Integer.parseInt(y[0]);
