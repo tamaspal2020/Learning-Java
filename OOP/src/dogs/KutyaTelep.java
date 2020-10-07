@@ -13,6 +13,7 @@ class Dog{
 }
 
 class Telep{
+	private int maxnum;
 	
 }
 
