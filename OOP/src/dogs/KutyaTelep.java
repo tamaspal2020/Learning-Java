@@ -9,7 +9,7 @@ public class KutyaTelep {
 
 }
 class Dog{
-	
+	private faj faja;
 }
 
 class Telep{
