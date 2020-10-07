@@ -4,7 +4,7 @@ public class ZXC {
 
 	public static void main(String[] args) {
 		TestCl a=new TestCl();
-		a.
+		a.Instantiater();
 	}
 
 }
