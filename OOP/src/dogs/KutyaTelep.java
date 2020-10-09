@@ -15,6 +15,9 @@ class Dog{
 	private int kora;
 	private Dog dad;
 	private Dog mom;
+	public boolean canX() {
+		return false;
+	}
 }
 
 class Telep{
