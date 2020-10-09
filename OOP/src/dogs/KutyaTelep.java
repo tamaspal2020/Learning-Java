@@ -15,7 +15,7 @@ class Dog{
 	private int kora;
 	private Dog dad;
 	private Dog mom;
-	public boolean canX() {
+	public boolean canX(Dog d) {
 		return false;
 	}
 	public void X() {
