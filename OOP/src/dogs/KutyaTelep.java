@@ -18,7 +18,7 @@ class Dog{
 	public boolean canX(Dog d) {
 		return false;
 	}
-	public void X() {
+	public void X(Dog d) {
 		
 	}
 }
