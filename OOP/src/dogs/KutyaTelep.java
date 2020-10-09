@@ -18,6 +18,9 @@ class Dog{
 	public boolean canX() {
 		return false;
 	}
+	public void X() {
+		
+	}
 }
 
 class Telep{
