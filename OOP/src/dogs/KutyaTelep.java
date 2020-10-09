@@ -10,8 +10,8 @@ public class KutyaTelep {
 }
 class Dog{
 	private faj faja;
-	private bool him;
-	private 
+	private boolean him;
+	private boolean torzskonyvezett;
 }
 
 class Telep{
